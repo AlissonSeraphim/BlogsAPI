@@ -13,15 +13,11 @@ const getUserByUsername = async (req, res) => {
     }); 
   }
 
-  console.log('existing email', existingEmail.dataValues);
-
   const { password: _password, ...userWithoutPassword } = existingEmail.dataValues;
 
   const payload = { data: userWithoutPassword };
 
   const token = createToken(payload);
-  console.log('token aqui:', token);
-  console.log('typeof token', typeof token);
 
   return res.status(mapStatusHTTP('OK')).json({ token });
 };

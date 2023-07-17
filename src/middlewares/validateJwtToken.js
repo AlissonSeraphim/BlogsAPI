@@ -9,9 +9,10 @@ const validateJwt = (req, res, next) => {
         message: 'Token not found',
       });
     }
-  
-    const payload = getPayload(authorization);
-    console.log('meu payload:', payload);
+
+    const removeBearer = authorization.replace('Bearer ', '');
+
+    const payload = getPayload(removeBearer);
 
     req.payload = payload;
     next();

@@ -14,10 +14,19 @@ const getUsers = async () => {
  return users;
 };
 
+const getUserById = async (id) => {
+  const user = await User.findByPk(id, {
+    attributes: { exclude: ['password'] },
+  });
+ 
+  return user;
+ };
+ 
 const getUserByEmail = (email) => User.findOne({ where: { email } });
 
 module.exports = {
   createUser,
   getUsers,
   getUserByEmail,
+  getUserById,
 };

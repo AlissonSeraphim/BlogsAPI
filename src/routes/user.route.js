@@ -8,6 +8,8 @@ const validateJwtToken = require('../middlewares/validateJwtToken');
 
 routes.get('/', validateJwtToken, userController.getUsers);
 
+routes.get('/:id', validateJwtToken, userController.getUserById);
+
 routes.post('/', validateUserEntries, userController.createUser);
 
 module.exports = routes;

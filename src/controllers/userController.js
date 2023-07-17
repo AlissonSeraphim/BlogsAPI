@@ -27,7 +27,7 @@ const createUser = async (req, res) => {
 const getUsers = async (_req, res) => {
   const users = await userService.getUsers();
 
-  return res.status(mapStatusHTTP('OK')).json({ data: users });
+  return res.status(mapStatusHTTP('OK')).json({ users });
 };
 
 module.exports = {

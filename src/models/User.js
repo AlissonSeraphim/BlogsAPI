@@ -5,7 +5,7 @@
  * @returns
  */
 
-const UserModel = (sequelize, DataTypes) => {
+module.exports = (sequelize, DataTypes) => {
   const User = sequelize.define('User', {
     id: {
       allowNull: false,
@@ -13,9 +13,10 @@ const UserModel = (sequelize, DataTypes) => {
       primaryKey: true,
       type: DataTypes.INTEGER
     },
-    display_name: {
+    displayName: {
       type: DataTypes.STRING,
-      allowNull: false
+      allowNull: false,
+      defaultValue: 'user'
     },
     email: {
       type: DataTypes.STRING,
@@ -32,6 +33,7 @@ const UserModel = (sequelize, DataTypes) => {
   {
     timestamps: false,
     tableName: 'users',
+    underscored: true,
   },
   );
   // User.associate = (models) => {
@@ -43,5 +45,3 @@ const UserModel = (sequelize, DataTypes) => {
 
   return User;
 };
-
-module.exports = UserModel;

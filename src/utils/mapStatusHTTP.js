@@ -10,6 +10,6 @@ const httpStatusMap = {
   INTERNAL_SERVER_ERROR: 500,
 };
 
-const mapStatusHTTP = (status) => httpStatusMap[status];
+const mapStatusHTTP = (status) => httpStatusMap[status] || 500;
 
 module.exports = mapStatusHTTP;

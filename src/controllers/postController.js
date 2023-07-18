@@ -20,6 +20,7 @@ const createPost = async (req, res) => {
   }
 
   const post = await postService.createPost({ title, content, categoryIds }, id);
+  console.log('createPost Return', post.dataValues);
 
   return res.status(mapStatusHTTP('CREATED')).json(post.dataValues);
 };

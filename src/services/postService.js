@@ -28,10 +28,20 @@ const createPost = async ({ title, content, categoryIds }, userId) => {
   return newPost;
 };
 
-const getPosts = async () => {
-  const Posts = await BlogPost.findAll();
+const getPosts = async (user) => {
+  const categories = await Category.findAll();
+  const allCategories = categories.map((category) => category.dataValues);
 
-  return Posts;
+  const posts = await BlogPost.findAll();
+  
+  const allPosts = posts.map((post) => (
+    {
+    ...post.dataValues,
+    user,
+    categories: allCategories,
+  }));
+
+  return allPosts;
 };
 
 module.exports = {

@@ -25,10 +25,11 @@ const createPost = async (req, res) => {
   return res.status(mapStatusHTTP('CREATED')).json(post.dataValues);
 };
 
-const getPost = async (_req, res) => {
-  const posts = await postService.getPosts();
+const getPost = async (req, res) => {
+  const { data } = req.payload;
+  const posts = await postService.getPosts(data);
 
-  return res.status(mapStatusHTTP('OK')).json(posts.dataValues);
+  return res.status(mapStatusHTTP('OK')).json(posts);
 };
 
 module.exports = {

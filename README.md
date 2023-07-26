@@ -2,6 +2,18 @@
 
 Este projeto consiste em uma API RESTful para a produção de conteúdo para um blog. A API foi desenvolvida em Node.js e utiliza o pacote Sequelize para realizar as operações de CRUD de posts, além de estabelecer relacionamentos entre as entidades do sistema.
 
+
+## Tecnologias Utilizadas
+
+- Node.js: plataforma de desenvolvimento em JavaScript do lado do servidor.
+- Sequelize: ORM (Object-Relational Mapping) para interagir com o banco de dados e gerenciar as models e migrations.
+- Express.js: framework web para construção de APIs RESTful em Node.js.
+- MySQL: sistema de gerenciamento de banco de dados relacional para a gestão de dados.
+- Docker: plataforma para empacotar, distribuir e executar aplicações em containers.
+- Mocha: framework de testes para JavaScript.
+- Chai: biblioteca de assertividade para testes em JavaScript.
+- Sinon: biblioteca para testes de stubs, spies e mocks em JavaScript.
+
 ## Funcionalidades
 
 A API oferece as seguintes funcionalidades:
@@ -68,6 +80,19 @@ Este projeto não possui licença.
 # [EN] Blog API Restful
 
 This project consists of a RESTful API for content production for a blog. The API was developed in Node.js using the Sequelize package to perform CRUD operations on posts and establish relationships between entities.
+
+
+## Technologies Used
+
+- Node.js: a server-side JavaScript development platform.
+- Sequelize: an ORM (Object-Relational Mapping) for interacting with the database and managing models and migrations.
+- Express.js: a web framework for building RESTful APIs in Node.js.
+- MySQL: a relational database management system for data management.
+- Docker: a platform for packaging, distributing, and running applications in containers.
+- Mocha: a testing framework for JavaScript.
+- Chai: an assertion library for JavaScript testing.
+- Sinon: a library for stubs, spies, and mocks in JavaScript testing.
+
 
 ## Features
 
